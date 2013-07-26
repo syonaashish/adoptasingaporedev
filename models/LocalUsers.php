@@ -70,7 +70,7 @@ class LocalUsers extends CActiveRecord
 			array('url, last_login', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, full_name, email_address,school_id,activecode, age, gender, city, country, nric, mobile_number, landline_number, timezone, url, visits, last_login, is_active, global_user_id', 'safe', 'on'=>'search'),
+			array('id, full_name, email_address,userScore,currentLevel, age, gender, city, country, nric, mobile_number, landline_number, timezone, url, visits, last_login, is_active, global_user_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -105,9 +105,9 @@ class LocalUsers extends CActiveRecord
 			'url' => 'Url',
 			'visits' => 'Visits',
 			'last_login' => 'Last Login',
-			'is_active' => 'Is Active',
-                        'school_id' => 'School',
-                        'activecode' =>'Active Code'
+			'is_active' => 'Is Active',                      
+                        'userScore' => 'Score',    
+                        'currentLevel' => 'Level',    
 		
 		
 		);
@@ -139,8 +139,10 @@ class LocalUsers extends CActiveRecord
 		$criteria->compare('visits',$this->visits);
 		$criteria->compare('last_login',$this->last_login,true);
 		$criteria->compare('is_active',$this->is_active);
-                $criteria->compare('school_id',$this->school_id,true);
-                $criteria->compare('activecode',$this->activecode,true);
+                $criteria->compare('userScore',$this->userScore);
+                $criteria->compare('currentLevel',$this->currentLevel);
+               
+               
  
   
 		//return new CActiveDataProvider($this, array('criteria'=>$criteria,));

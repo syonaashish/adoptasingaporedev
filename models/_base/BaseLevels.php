@@ -27,8 +27,8 @@ abstract class BaseLevels extends CActiveRecord {
 
     public function rules() {
         return array(
-            array('levelName, areaType, trashItems, timerCountDown, subLevel, bonusPoint', 'required'),
-            array('trashItems, timerCountDown, bonusPoint', 'numerical', 'integerOnly' => true),
+            array('levelName, areaType, trashItems, timerCountDown, subLevel', 'required'),
+            array('trashItems, timerCountDown', 'numerical', 'integerOnly' => true),
             array('levelName, areaType', 'length', 'max' => 255),
             array('subLevel', 'length', 'max' => 100),
             array('levelID, levelName, areaType, trashItems, timerCountDown, subLevel, bonusPoint', 'safe', 'on' => 'search'),
@@ -71,8 +71,21 @@ abstract class BaseLevels extends CActiveRecord {
         $criteria->compare('subLevel', $this->subLevel, true);
         $criteria->compare('bonusPoint', $this->bonusPoint);
 
-        return new CActiveDataProvider(get_class($this), array(
+        //return new CActiveDataProvider(get_class($this), array('criteria' => $criteria, ));
+        
+        				
+				return new CActiveDataProvider(get_class($this), array(
                     'criteria' => $criteria,
+      'sort'=>array(
+   'defaultOrder'=>array(
+       'id'=>false,
+   ),
+    ),
+     
+      'pagination' => array(
+   
+   'pageSize' => 100,
+      ),
                 ));
     }
     

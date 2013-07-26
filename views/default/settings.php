@@ -56,19 +56,6 @@ $tabs['generalSettings'] = array("General Settings","settings",array("localApp" 
 
 <?php $this->renderPartial("//site/render_settings_tabs",array("tabs"=>$tabs)); ?>
 
-<br /><br />
-
-
-
-<a href="index.php?r=adoptasingaporedev/default/settings&tab=manageCategories&themeId=7&localAppId=24&uiTab=tabs-2" >tab2</a>
-<br /><br /><br />
-
-
-<a href="index.php?r=adoptasingaporedev/default/settings&tab=manageSharingMessages&themeId=7&localAppId=24&uiTab=tabs-5" >sharing msgs</a>
-
-<br /><br /><br />
-
-
 
 
 

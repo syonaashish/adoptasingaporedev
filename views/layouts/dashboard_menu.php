@@ -8,7 +8,7 @@ $dashboardMenu = array();
 $dashboardMenu['Customize'][] = '<li><a href="index.php?r='.$data->app.'/default/customizeTheme&themeId='.$data->theme_id.'&localAppId='.$data->app_local_id.'"><span class="icos-add"></span>Customize Theme</a></li>';
 
 
-$dashboardMenu['Settings'][] = '<li><a href="index.php?r='.$data->app.'/default/settings&tab=content&themeId='.$data->theme_id.'&localAppId='.$data->app_local_id.'"><span class="icos-add"></span>Content Setting</a></li>';
+$dashboardMenu['Settings'][] = '<li><a href="index.php?r='.$data->app.'/default/settings&tab=manageLevels&themeId='.$data->theme_id.'&localAppId='.$data->app_local_id.'#tabs-1"><span class="icos-add"></span>Content Setting</a></li>';
 
 
 $dashboardMenu['Settings'][] = '<li><a href="index.php?r='.$data->app.'/default/publishing&themeId='.$data->theme_id.'&localAppId='.$data->app_local_id.'"><span class="icos-add"></span>Publishing</a></li>';

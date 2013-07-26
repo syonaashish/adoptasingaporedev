@@ -27,28 +27,16 @@ $criteria = new CDbCriteria();
             'value'=>'$data->full_name',
         ),
 
-        array(
-            'header'=>'UserName',
-            'name'=>'username',
-            'value'=>'$data->username',
-        ),
+       
         array(
             'header'=>'Email',
             'name'=>'email_address',
             'value'=>'$data->email_address',
         ),
-        array(
-            'header'=>'User type',
-            'name'=>'user_fb_id',
-            'value'=>array($model,'showUser'),
-        ),
+      userScore,     
+      currentLevel,
 
-/*        array(
-            'name'=>'Recipe Image',
-            'type'=>'html',
-            'value'=>'CHtml::image("user_assets/uploads/dreyersreceipe/320x320/".$data->image,"$data->image",$htmlOptions = array("width"=>"80","height"=>"80"))',
 
-        ),*/
 
 array(
 			'class' => 'CButtonColumn',
